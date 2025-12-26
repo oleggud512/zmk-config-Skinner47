@@ -9,10 +9,10 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp Q         &kp W         &kp E       &kp R         &kp T                                    &kp T            &kp T  &kp T      &kp T    &kp P          &kp BACKSPACE
-&kp LCTRL  &kp A         &kp S         &kp D       &kp F         &kp G                                    &kp H            &kp J  &kp K      &kp L    &kp SEMI       &kp APOS
-&kp LSHFT  &kp Z         &kp X         &kp C       &kp V         &kp B                                    &kp N            &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp K_MENU  &lt 6 ESCAPE  &lt 4 SPACE  &lt 5 LA(GRAVE)  &kp ENTER  &lt 2 BACKSPACE                             &kp RIGHT_ALT  &kp PRINTSCREEN
+&kp ESC    &kp Q         &kp W         &kp E       &kp R         &kp T                                    &kp Y        &kp U  &kp I      &kp O    &kp P          &kp BACKSPACE
+&kp LCTRL  &kp A         &kp S         &kp D       &kp F         &kp G                                    &kp H        &kp J  &kp K      &kp L    &kp SEMI       &kp APOS
+&kp LSHFT  &kp Z         &kp X         &kp C       &kp V         &kp B                                    &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp RSHFT
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp K_MENU  &lt 6 ESCAPE  &lt 4 SPACE  &lt 5 LA(GRAVE)  &kp ENTER  &lt 2 SPACE                             &kp RIGHT_ALT  &kp PRINTSCREEN
             >;
         };
 
@@ -45,10 +45,10 @@
 
         mouse_layer {
             bindings = <
-&trans  &kp N1    &kp N2    &kp N3  &kp N4     &kp N5                  &kp N6         &kp N7     &kp N8  &kp N9     &kp N0     &trans
-&trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans                  &kp PAGE_UP    &mkp LCLK  &trans  &mkp RCLK  &mkp MCLK  &trans
-&trans  &trans    &trans    &trans  &trans     &trans                  &kp PAGE_DOWN  &trans     &trans  &trans     &trans     &trans
-&trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans  &trans                                       &trans     &trans
+&trans  &kp N1    &kp N2    &kp N3  &kp N4     &kp N5                  &kp N6         &kp N7     &kp N8     &kp N9     &kp N0     &trans
+&trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans                  &kp PAGE_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MCLK  &trans
+&trans  &trans    &trans    &trans  &trans     &trans                  &kp PAGE_DOWN  &trans     &trans     &trans     &trans     &trans
+&trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans  &trans                                          &trans     &trans
             >;
         };
 
