@@ -124,10 +124,10 @@
 
         default_layer {
             bindings = <
-&none  &kp Q  &kp W  &kp E  &kp R  &kp T                    &kp Y      &kp U  &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &kp D  &kp F  &kp G                    &kp H      &kp J  &kp K      &kp L    &kp SEMI  &none
-&none  &kp Z  &kp X  &kp C  &kp V  &kp B                    &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-&none  &none  &none  &none  &mo 4  &kp SPACE  &mo 1  &mo 2  &kp SPACE                             &none     &none
+&none    &kp Q  &kp W  &kp E  &kp R  &kp T                    &kp Y      &kp U  &kp I      &kp O    &kp P     &none
+&kp TAB  &kp A  &kp S  &kp D  &kp F  &kp G                    &kp H      &kp J  &kp K      &kp L    &kp SEMI  &none
+&none    &kp Z  &kp X  &kp C  &kp V  &kp B                    &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
+&none    &none  &none  &none  &mo 4  &kp SPACE  &mo 1  &mo 2  &kp SPACE                             &none     &none
             >;
         };
 
@@ -160,10 +160,10 @@
 
         mouse_layer {
             bindings = <
-&trans  &msc MOVE_X(-5)  &msc MOVE_Y(-5)  &msc MOVE_Y(5)  &msc MOVE_X(5)   &trans                  &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &msc SCRL_LEFT   &msc SCRL_UP     &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans                  &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
-&trans  &trans           &trans           &trans          &trans           &trans                  &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &trans           &trans           &trans          &trans           &trans  &trans  &trans  &trans                                &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                  &trans  &trans          &kp PAGE_DOWN   &kp PAGE_UP   &trans           &trans
+&trans  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                  &trans  &trans          &trans          &trans        &trans           &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans                                                &trans           &trans
             >;
         };
     };
