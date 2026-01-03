@@ -103,6 +103,22 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        left_boot {
+            bindings = <&bootloader>;
+            key-positions = <36 37 36 37>;
+            layers = <1>;
+        };
+
+        right_boot {
+            bindings = <&bootloader>;
+            key-positions = <45 46>;
+            layers = <2>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
