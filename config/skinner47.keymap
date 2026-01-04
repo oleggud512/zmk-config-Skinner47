@@ -351,7 +351,7 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
 
-            label = "<";
+            label = "open angle br";
         };
 
         sft_dot: sft_dot {
@@ -365,7 +365,7 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
 
-            label = ">";
+            label = "close angle br";
         };
 
         sft_slash: sft_slash {
