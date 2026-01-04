@@ -102,20 +102,6 @@
             label = "UNTAB";
         };
 
-        sft_7: amp {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp N7>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>;
-
-            label = "AMP";
-        };
-
         sft_1: sft_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -127,7 +113,7 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
 
-            label = "SFT_1";
+            label = "!";
         };
 
         sft_2: sft_2 {
@@ -141,7 +127,7 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
 
-            label = "SFT_2";
+            label = "@";
         };
 
         sft_3: sft_3 {
@@ -155,7 +141,244 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
 
-            label = "SFT_3";
+            label = "#";
+        };
+
+        sft_4: sft_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp N4>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "$";
+        };
+
+        sft_5: sft_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp N5>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "%";
+        };
+
+        sft_6: sft_6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp N6>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "^";
+        };
+        
+        sft_7: sft_7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp N7>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "&";
+        };
+        sft_8: sft_8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp N8>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "*";
+        };
+
+        sft_9: sft_9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp N9>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "(";
+        };
+        
+        sft_0: sft_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp N0>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = ")";
+        };
+
+        sft_minus: sft_minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp MINUS>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "_";
+        };
+
+        sft_equal: sft_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp EQUAL>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "+";
+        };
+
+        sft_backslash: sft_backslash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp BACKSLASH>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "|";
+        };
+
+        sft_l_sq_br: sft_l_sq_br {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp LEFT_BRACKET>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "{";
+        };
+
+        sft_r_sq_br: sft_r_sq_br {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp RIGHT_BRACKET>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "}";
+        };
+
+        sft_semicolon: sft_semicolon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp SEMICOLON>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = ":";
+        };
+
+        sft_quote: sft_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp SINGLE_QUOTE>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "double quote";
+        };
+
+        sft_comma: sft_comma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp COMMA>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "<";
+        };
+
+        sft_dot: sft_dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp DOT>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = ">";
+        };
+
+        sft_slash: sft_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp SLASH>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "?";
         };
     };
 
