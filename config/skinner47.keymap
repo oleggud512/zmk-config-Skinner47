@@ -483,10 +483,10 @@
 
         left_layer {
             bindings = <
-&kp GRAVE  &kp BACKSPACE  &prt_scr_all  &prt_scr_snip  &trans          &untab                     &kp CAPSLOCK  &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
-&trans     &kp LCTRL      &kp LEFT_ALT  &kp LEFT_META  &kp LEFT_SHIFT  &kp TAB                    &trans        &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
-&trans     &undo          &save         &copy          &paste          &kp ENTER                  &kp ENTER     &kp BACKSPACE  &kp DELETE     &trans       &trans     &trans
-&trans     &bootloader    &trans        &trans         &trans          &kp SPACE  &trans  &trans  &kp SPACE                                                &trans     &trans
+&trans      &kp BACKSPACE  &prt_scr_all  &prt_scr_snip  &trans          &untab                     &kp CAPSLOCK  &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
+&kp ESCAPE  &kp LCTRL      &kp LEFT_ALT  &kp LEFT_META  &kp LEFT_SHIFT  &kp TAB                    &trans        &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
+&trans      &undo          &save         &copy          &paste          &kp ENTER                  &kp ENTER     &kp BACKSPACE  &kp DELETE     &trans       &trans     &trans
+&trans      &bootloader    &trans        &trans         &trans          &kp SPACE  &trans  &trans  &kp SPACE                                                &trans     &trans
             >;
         };
 
@@ -501,10 +501,10 @@
 
         both_layer {
             bindings = <
-&trans  &kp F12             &kp F9        &kp F8         &kp F7         &trans                  &trans  &kp N7         &kp N8         &kp N9             &trans              &trans
-&trans  &hml LEFT_META F11  &hml LALT F6  &hml LCTRL F5  &hml LSHFT F4  &trans                  &trans  &hmr RSHFT N4  &hmr RCTRL N5  &hmr RIGHT_ALT N6  &hmr RIGHT_META N0  &trans
-&trans  &kp F10             &kp F3        &kp F2         &kp F1         &trans                  &trans  &kp N1         &kp N2         &kp N3             &trans              &trans
-&trans  &trans              &trans        &trans         &trans         &trans  &trans  &trans  &trans                                                   &trans              &trans
+&trans  &kp F12             &kp F9        &kp F8         &kp F7         &kp DOT                    &trans  &kp N7         &kp N8         &kp N9             &trans              &trans
+&trans  &hml LEFT_META F11  &hml LALT F6  &hml LCTRL F5  &hml LSHFT F4  &trans                     &trans  &hmr RSHFT N4  &hmr RCTRL N5  &hmr RIGHT_ALT N6  &hmr RIGHT_META N0  &trans
+&trans  &kp F10             &kp F3        &kp F2         &kp F1         &kp COMMA                  &trans  &kp N1         &kp N2         &kp N3             &trans              &trans
+&trans  &trans              &trans        &trans         &trans         &trans     &trans  &trans  &trans                                                   &trans              &trans
             >;
         };
 
