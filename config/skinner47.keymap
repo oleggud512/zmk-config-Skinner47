@@ -538,19 +538,19 @@
 
         ru_default_layer {
             bindings = <
-&kp RA(GRAVE)  &kp RA(Q)              &kp RA(W)             &kp RA(E)          &kp RA(R)         &kp RA(T)                &kp RA(Y)  &kp RA(U)             &kp RA(I)              &kp RA(O)         &kp RA(P)                       &kp RA(LEFT_BRACKET)
-&none          &hmll LEFT_META RA(A)  &hmll LEFT_ALT RA(S)  &hmll LCTRL RA(D)  &hml LSHFT RA(F)  &kp RA(G)                &kp RA(H)  &hmr RA(RSHFT) RA(J)  &hmlr RA(RCTRL) RA(K)  &hmlr RALT RA(L)  &hmlr RIGHT_META RA(SEMICOLON)  &kp RA(SINGLE_QUOTE)
-&none          &kp RA(Z)              &kp RA(X)             &kp RA(C)          &kp RA(V)         &kp RA(B)                &kp RA(N)  &kp RA(M)             &kp RA(COMMA)          &kp RA(DOT)       &none                           &kp RA(RIGHT_BRACKET)
-&to 3          &none                  &to 1                 &to 0              &mo 8             &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                                 &lang_change_1                  &none
+&kp RA(GRAVE)  &kp RA(Q)              &kp RA(W)             &kp RA(E)          &kp RA(R)         &kp RA(T)                &kp RA(Y)  &kp RA(U)         &kp RA(I)          &kp RA(O)         &kp RA(P)                       &kp RA(LEFT_BRACKET)
+&none          &hmll LEFT_META RA(A)  &hmll LEFT_ALT RA(S)  &hmll LCTRL RA(D)  &hml LSHFT RA(F)  &kp RA(G)                &kp RA(H)  &hmr RSHFT RA(J)  &hmlr RCTRL RA(K)  &hmlr RALT RA(L)  &hmlr RIGHT_META RA(SEMICOLON)  &kp RA(SINGLE_QUOTE)
+&none          &kp RA(Z)              &kp RA(X)             &kp RA(C)          &kp RA(V)         &kp RA(B)                &kp RA(N)  &kp RA(M)         &kp RA(COMMA)      &kp RA(DOT)       &none                           &kp RA(RIGHT_BRACKET)
+&to 3          &none                  &to 1                 &to 0              &mo 8             &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                         &lang_change_1                  &none
             >;
         };
 
         ua_default_layer {
             bindings = <
-&kp RA(N9)  &kp RA(Q)              &kp RA(W)              &kp RA(E)          &kp RA(R)         &kp RA(T)                &kp RA(Y)  &kp RA(U)             &kp RA(I)              &kp RA(O)         &kp RA(P)                       &kp RA(LEFT_BRACKET)
-&none       &hmll LEFT_META RA(A)  &hmll LEFT_ALT RA(N2)  &hmll LCTRL RA(D)  &hml LSHFT RA(F)  &kp RA(G)                &kp RA(H)  &hmr RA(RSHFT) RA(J)  &hmlr RA(RCTRL) RA(K)  &hmlr RALT RA(L)  &hmlr RIGHT_META RA(SEMICOLON)  &kp RA(N3)
-&none       &kp RA(Z)              &kp RA(X)              &kp RA(C)          &kp RA(V)         &kp RA(B)                &kp RA(N)  &kp RA(M)             &kp RA(COMMA)          &kp RA(DOT)       &none                           &kp RA(N4)
-&none       &to 2                  &to 1                  &to 0              &mo 8             &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                                 &lang_change_1                  &none
+&kp RA(N9)  &kp RA(Q)              &kp RA(W)              &kp RA(E)          &kp RA(R)         &kp RA(T)                &kp RA(Y)  &kp RA(U)         &kp RA(I)          &kp RA(O)         &kp RA(P)                       &kp RA(LEFT_BRACKET)
+&none       &hmll LEFT_META RA(A)  &hmll LEFT_ALT RA(N2)  &hmll LCTRL RA(D)  &hml LSHFT RA(F)  &kp RA(G)                &kp RA(H)  &hmr RSHFT RA(J)  &hmlr RCTRL RA(K)  &hmlr RALT RA(L)  &hmlr RIGHT_META RA(SEMICOLON)  &kp RA(N3)
+&none       &kp RA(Z)              &kp RA(X)              &kp RA(C)          &kp RA(V)         &kp RA(B)                &kp RA(N)  &kp RA(M)         &kp RA(COMMA)      &kp RA(DOT)       &none                           &kp RA(N4)
+&none       &to 2                  &to 1                  &to 0              &mo 8             &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                         &lang_change_1                  &none
             >;
         };
 
