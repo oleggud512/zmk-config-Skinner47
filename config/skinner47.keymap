@@ -493,7 +493,7 @@
         left_layer {
             bindings = <
 &trans      &kp BACKSPACE  &prt_scr_all  &prt_scr_snip  &trans          &untab                     &kp CAPSLOCK  &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
-&kp ESCAPE  &kp LCTRL      &kp LEFT_ALT  &kp LEFT_META  &kp LEFT_SHIFT  &kp TAB                    &trans        &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
+&kp ESCAPE  &kp LMETA      &kp LEFT_ALT  &kp LCTRL      &kp LEFT_SHIFT  &kp TAB                    &trans        &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
 &trans      &undo          &save         &copy          &paste          &kp ENTER                  &kp ENTER     &kp BACKSPACE  &kp DELETE     &kp MINUS    &kp EQUAL  &kp BACKSLASH
 &trans      &bootloader    &trans        &trans         &trans          &trans     &trans  &trans  &trans                                                   &trans     &trans
             >;
