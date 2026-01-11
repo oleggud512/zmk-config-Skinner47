@@ -469,7 +469,7 @@
                 <&kp F>
                 <&macro_release>
                 <&kp LEFT_ALT>
-                <&kp LEFT_CONTROL>
+                <&kp LEFT_CONTROL>;
 
         };
     };
