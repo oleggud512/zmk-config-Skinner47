@@ -471,7 +471,7 @@
                 <&kp LEFT_ALT>
                 <&kp LEFT_CONTROL>
 
-        }
+        };
     };
 
     combos { compatible = "zmk,combos"; };
