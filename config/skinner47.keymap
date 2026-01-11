@@ -483,10 +483,10 @@
 
         ru_default_layer {
             bindings = <
-&none  &kp RA(Q)  &kp RA(W)  &kp RA(E)  &kp RA(R)  &kp RA(T)                &kp RA(Y)  &kp RA(U)  &kp RA(I)      &kp RA(O)    &kp RA(P)          &none
-&none  &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)  &kp RA(G)                &kp RA(H)  &kp RA(J)  &kp RA(K)      &kp RA(L)    &kp RA(SEMICOLON)  &none
-&none  &kp RA(Z)  &kp RA(X)  &kp RA(C)  &kp RA(V)  &kp RA(B)                &kp RA(N)  &kp RA(M)  &kp RA(COMMA)  &kp RA(DOT)  &kp RA(SLASH)      &none
-&none  &none      &none      &to 0      &mo 5      &kp SPACE  &mo 2  &mo 3  &kp SPACE                                         &none              &none
+&kp RA(GRAVE)  &kp RA(Q)  &kp RA(W)  &kp RA(E)  &kp RA(R)  &kp RA(T)                &kp RA(Y)  &kp RA(U)  &kp RA(I)      &kp RA(O)    &kp RA(P)          &kp RA(LEFT_BRACKET)
+&none          &kp RA(A)  &kp RA(S)  &kp RA(D)  &kp RA(F)  &kp RA(G)                &kp RA(H)  &kp RA(J)  &kp RA(K)      &kp RA(L)    &kp RA(SEMICOLON)  &kp RA(SINGLE_QUOTE)
+&none          &kp RA(Z)  &kp RA(X)  &kp RA(C)  &kp RA(V)  &kp RA(B)                &kp RA(N)  &kp RA(M)  &kp RA(COMMA)  &kp RA(DOT)  &none              &kp RA(RIGHT_BRACKET)
+&none          &none      &none      &to 0      &mo 5      &kp SPACE  &mo 2  &mo 3  &kp SPACE                                         &lang_change_1     &none
             >;
         };
 
