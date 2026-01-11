@@ -445,7 +445,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&mo 2 &macro_param_1to1>,
+                <&mo 4 &macro_param_1to1>,
                 <&macro_press>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
@@ -453,7 +453,7 @@
                 <&macro_release>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
-                <&mo 2>;
+                <&mo 4>;
 
             label = "mod and mod layer";
         };
@@ -523,7 +523,16 @@
 &none  &kp Q              &kp W             &kp E                 &kp R              &kp T                    &kp Y      &kp U         &kp I          &kp O              &kp P                       &none
 &none  &hmll LEFT_META A  &hmll LEFT_ALT S  &hmll LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                    &kp H      &hmr RSHFT J  &hmlr RCTRL K  &hmlr RIGHT_ALT L  &hmlr RIGHT_META SEMICOLON  &none
 &none  &kp Z              &kp X             &kp C                 &kp V              &kp B                    &kp N      &kp M         &none          &none              &none                       &none
-&none  &to 1              &none             &none                 &mo 6              &kp SPACE  &mo 3  &mo 4  &kp SPACE                                                  &lang_change_1              &none
+&to 3  &to 2              &to 1             &none                 &mo 8              &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                  &lang_change_1              &none
+            >;
+        };
+
+        de_default_layer {
+            bindings = <
+&none  &kp Q              &kp W             &kp E                 &kp R              &kp T                    &kp Z      &kp U         &kp I          &kp O              &kp P                       &kp RA(N8)
+&none  &hmll LEFT_META A  &hmll LEFT_ALT S  &hmll LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                    &kp H      &hmr RSHFT J  &hmlr RCTRL K  &hmlr RIGHT_ALT L  &hmlr RIGHT_META SEMICOLON  &kp RA(N6)
+&none  &kp Y              &kp X             &kp C                 &kp V              &kp B                    &kp N      &kp M         &none          &none              &none                       &kp RA(N5)
+&to 3  &to 2              &none             &to 0                 &mo 8              &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                  &lang_change_1              &none
             >;
         };
 
@@ -532,7 +541,16 @@
 &kp RA(GRAVE)  &kp RA(Q)              &kp RA(W)             &kp RA(E)          &kp RA(R)         &kp RA(T)                &kp RA(Y)  &kp RA(U)             &kp RA(I)              &kp RA(O)         &kp RA(P)                       &kp RA(LEFT_BRACKET)
 &none          &hmll LEFT_META RA(A)  &hmll LEFT_ALT RA(S)  &hmll LCTRL RA(D)  &hml LSHFT RA(F)  &kp RA(G)                &kp RA(H)  &hmr RA(RSHFT) RA(J)  &hmlr RA(RCTRL) RA(K)  &hmlr RALT RA(L)  &hmlr RIGHT_META RA(SEMICOLON)  &kp RA(SINGLE_QUOTE)
 &none          &kp RA(Z)              &kp RA(X)             &kp RA(C)          &kp RA(V)         &kp RA(B)                &kp RA(N)  &kp RA(M)             &kp RA(COMMA)          &kp RA(DOT)       &none                           &kp RA(RIGHT_BRACKET)
-&none          &none                  &none                 &to 0              &mo 6             &kp SPACE  &mo 3  &mo 4  &kp SPACE                                                                 &lang_change_1                  &none
+&to 3          &none                  &to 1                 &to 0              &mo 8             &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                                 &lang_change_1                  &none
+            >;
+        };
+
+        ua_default_layer {
+            bindings = <
+&kp RA(N9)  &kp RA(Q)              &kp RA(W)              &kp RA(E)          &kp RA(R)         &kp RA(T)                &kp RA(Y)  &kp RA(U)             &kp RA(I)              &kp RA(O)         &kp RA(P)                       &kp RA(LEFT_BRACKET)
+&none       &hmll LEFT_META RA(A)  &hmll LEFT_ALT RA(N2)  &hmll LCTRL RA(D)  &hml LSHFT RA(F)  &kp RA(G)                &kp RA(H)  &hmr RA(RSHFT) RA(J)  &hmlr RA(RCTRL) RA(K)  &hmlr RALT RA(L)  &hmlr RIGHT_META RA(SEMICOLON)  &kp RA(N3)
+&none       &kp RA(Z)              &kp RA(X)              &kp RA(C)          &kp RA(V)         &kp RA(B)                &kp RA(N)  &kp RA(M)             &kp RA(COMMA)          &kp RA(DOT)       &none                           &kp RA(N4)
+&none       &to 2                  &to 1                  &to 0              &mo 8             &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                                 &lang_change_1                  &none
             >;
         };
 
@@ -541,7 +559,7 @@
 &none  &kp Q             &kp W            &kp E                &kp R              &kp T                    &kp Y      &kp U         &kp I         &kp O             &kp P                 &kp LEFT_BRACKET
 &none  &hml LEFT_META A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                    &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RIGHT_ALT L  &hmr RIGHT_META SEMI  &kp SINGLE_QUOTE
 &none  &kp Z             &kp X            &kp C                &kp V              &kp B                    &kp N      &kp M         &kp COMMA     &kp DOT           &kp SLASH             &kp RIGHT_BRACKET
-&none  &to 1             &none            &none                &mo 6              &kp SPACE  &mo 3  &mo 4  &kp SPACE                                                &lang_change_1        &none
+&none  &to 2             &none            &none                &mo 8              &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                &lang_change_1        &none
             >;
         };
 
@@ -580,23 +598,14 @@
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans                                                &trans           &trans
             >;
         };
-
-        ua_default_layer {
-            bindings = <
-&kp RA(N9)  &kp RA(Q)              &kp RA(W)              &kp RA(E)          &kp RA(R)         &kp RA(T)                &kp RA(Y)  &kp RA(U)             &kp RA(I)              &kp RA(O)         &kp RA(P)                       &kp RA(LEFT_BRACKET)
-&none       &hmll LEFT_META RA(A)  &hmll LEFT_ALT RA(N2)  &hmll LCTRL RA(D)  &hml LSHFT RA(F)  &kp RA(G)                &kp RA(H)  &hmr RA(RSHFT) RA(J)  &hmlr RA(RCTRL) RA(K)  &hmlr RALT RA(L)  &hmlr RIGHT_META RA(SEMICOLON)  &kp RA(N3)
-&none       &kp RA(Z)              &kp RA(X)              &kp RA(C)          &kp RA(V)         &kp RA(B)                &kp RA(N)  &kp RA(M)             &kp RA(COMMA)          &kp RA(DOT)       &none                           &kp RA(N4)
-&none       &none                  &none                  &to 0              &mo 6             &kp SPACE  &mo 3  &mo 4  &kp SPACE                                                                 &lang_change_1                  &none
-            >;
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <3 4>;
-            then-layer = <5>;
+            if-layers = <5 6>;
+            then-layer = <7>;
         };
     };
 };
