@@ -529,27 +529,27 @@
 
         de_default_layer {
             bindings = <
-&none  &kp Q              &kp W             &kp E                 &kp R              &kp T                    &kp Z      &kp U         &kp I          &kp O              &kp P                       &kp RA(N8)
-&none  &hmll LEFT_META A  &hmll LEFT_ALT S  &hmll LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                    &kp H      &hmr RSHFT J  &hmlr RCTRL K  &hmlr RIGHT_ALT L  &hmlr RIGHT_META SEMICOLON  &kp RA(N6)
-&none  &kp Y              &kp X             &kp C                 &kp V              &kp B                    &kp N      &kp M         &none          &none              &none                       &kp RA(N5)
+&none  &kp Q              &kp W             &kp E                 &kp R              &kp T                    &kp Z      &kp U         &kp I          &kp O              &kp P                       &kp LC(RA(N8))
+&none  &hmll LEFT_META A  &hmll LEFT_ALT S  &hmll LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                    &kp H      &hmr RSHFT J  &hmlr RCTRL K  &hmlr RIGHT_ALT L  &hmlr RIGHT_META SEMICOLON  &kp LC(RA(N6))
+&none  &kp Y              &kp X             &kp C                 &kp V              &kp B                    &kp N      &kp M         &none          &none              &none                       &kp LC(RA(N5))
 &to 3  &to 2              &none             &to 0                 &mo 8              &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                  &lang_change_1              &none
             >;
         };
 
         ru_default_layer {
             bindings = <
-&kp RA(GRAVE)  &kp RA(Q)              &kp RA(W)             &kp RA(E)          &kp RA(R)         &kp RA(T)                &kp RA(Y)  &kp RA(U)             &kp RA(I)              &kp RA(O)         &kp RA(P)                       &kp RA(LEFT_BRACKET)
-&none          &hmll LEFT_META RA(A)  &hmll LEFT_ALT RA(S)  &hmll LCTRL RA(D)  &hml LSHFT RA(F)  &kp RA(G)                &kp RA(H)  &hmr RA(RSHFT) RA(J)  &hmlr RA(RCTRL) RA(K)  &hmlr RALT RA(L)  &hmlr RIGHT_META RA(SEMICOLON)  &kp RA(SINGLE_QUOTE)
-&none          &kp RA(Z)              &kp RA(X)             &kp RA(C)          &kp RA(V)         &kp RA(B)                &kp RA(N)  &kp RA(M)             &kp RA(COMMA)          &kp RA(DOT)       &none                           &kp RA(RIGHT_BRACKET)
+&kp LC(RA(GRAVE))  &kp LC(RA(Q))              &kp LC(RA(W))             &kp LC(RA(E))          &kp LC(RA(R))         &kp LC(RA(T))                &kp LC(RA(Y))  &kp LC(RA(U))             &kp LC(RA(I))              &kp LC(RA(O))         &kp LC(RA(P))                       &kp LC(RA(LEFT_BRACKET))
+&none          &hmll LEFT_META LC(RA(A))  &hmll LEFT_ALT LC(RA(S))  &hmll LCTRL LC(RA(D))  &hml LSHFT LC(RA(F))  &kp LC(RA(G))                &kp LC(RA(H))  &hmr LC(RA(RSHFT)) LC(RA(J))  &hmlr LC(RA(RCTRL)) LC(RA(K))  &hmlr RALT LC(RA(L))  &hmlr RIGHT_META LC(RA(SEMICOLON))  &kp LC(RA(SINGLE_QUOTE))
+&none          &kp LC(RA(Z))              &kp LC(RA(X))             &kp LC(RA(C))          &kp LC(RA(V))         &kp LC(RA(B))                &kp LC(RA(N))  &kp LC(RA(M))             &kp LC(RA(COMMA))          &kp LC(RA(DOT))       &none                           &kp LC(RA(RIGHT_BRACKET))
 &to 3          &none                  &to 1                 &to 0              &mo 8             &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                                 &lang_change_1                  &none
             >;
         };
 
         ua_default_layer {
             bindings = <
-&kp RA(N9)  &kp RA(Q)              &kp RA(W)              &kp RA(E)          &kp RA(R)         &kp RA(T)                &kp RA(Y)  &kp RA(U)             &kp RA(I)              &kp RA(O)         &kp RA(P)                       &kp RA(LEFT_BRACKET)
-&none       &hmll LEFT_META RA(A)  &hmll LEFT_ALT RA(N2)  &hmll LCTRL RA(D)  &hml LSHFT RA(F)  &kp RA(G)                &kp RA(H)  &hmr RA(RSHFT) RA(J)  &hmlr RA(RCTRL) RA(K)  &hmlr RALT RA(L)  &hmlr RIGHT_META RA(SEMICOLON)  &kp RA(N3)
-&none       &kp RA(Z)              &kp RA(X)              &kp RA(C)          &kp RA(V)         &kp RA(B)                &kp RA(N)  &kp RA(M)             &kp RA(COMMA)          &kp RA(DOT)       &none                           &kp RA(N4)
+&kp LC(RA(N9))  &kp LC(RA(Q))              &kp LC(RA(W))              &kp LC(RA(E))          &kp LC(RA(R))         &kp LC(RA(T))                &kp LC(RA(Y))  &kp LC(RA(U))             &kp LC(RA(I))              &kp LC(RA(O))         &kp LC(RA(P))                       &kp LC(RA(LEFT_BRACKET))
+&none       &hmll LEFT_META LC(RA(A))  &hmll LEFT_ALT LC(RA(N2))  &hmll LCTRL LC(RA(D))  &hml LSHFT LC(RA(F))  &kp LC(RA(G))                &kp LC(RA(H))  &hmr LC(RA(RSHFT)) LC(RA(J))  &hmlr LC(RA(RCTRL)) LC(RA(K))  &hmlr RALT LC(RA(L))  &hmlr RIGHT_META LC(RA(SEMICOLON))  &kp LC(RA(N3))
+&none       &kp LC(RA(Z))              &kp LC(RA(X))              &kp LC(RA(C))          &kp LC(RA(V))         &kp LC(RA(B))                &kp LC(RA(N))  &kp LC(RA(M))             &kp LC(RA(COMMA))          &kp LC(RA(DOT))       &none                           &kp LC(RA(N4))
 &none       &to 2                  &to 1                  &to 0              &mo 8             &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                                 &lang_change_1                  &none
             >;
         };
