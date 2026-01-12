@@ -482,7 +482,7 @@
                 <&macro_release>,
                 <&kp SPACE>;
             label = "my space";
-        }
+        };
     };
 
     combos { compatible = "zmk,combos"; };
