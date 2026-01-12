@@ -471,6 +471,18 @@
 
             label = "a tap";
         };
+
+        my_spc: my_spc {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            wait-ms = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp SPACE>;
+            label = "my space";
+        }
     };
 
     combos { compatible = "zmk,combos"; };
@@ -612,19 +624,19 @@
 
         ru_default_layer {
             bindings = <
-&none          &agrtap Q           &agrtap W          &agrtap E       &agrtap R      &agrtap T                &agrtap Y  &agrtap U      &agrtap I       &agrtap O      &agrtap P                    &agrtap LEFT_BRACKET
-&agrtap GRAVE  &hmlal LEFT_META A  &hmlal LEFT_ALT S  &hmlal LCTRL D  &hmal LSHFT F  &agrtap G                &agrtap H  &hmar RSHFT J  &hmlar RCTRL K  &hmlar RALT L  &hmlar RIGHT_META SEMICOLON  &agrtap SINGLE_QUOTE
-&none          &agrtap Z           &agrtap X          &agrtap C       &agrtap V      &agrtap B                &agrtap N  &agrtap M      &agrtap COMMA   &agrtap DOT    &none                        &agrtap RIGHT_BRACKET
-&to 3          &none               &to 1              &to 0           &mo 8          &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                &lang_change_1               &none
+&none          &agrtap Q           &agrtap W          &agrtap E       &agrtap R      &agrtap T              &agrtap Y  &agrtap U      &agrtap I       &agrtap O      &agrtap P                    &agrtap LEFT_BRACKET
+&agrtap GRAVE  &hmlal LEFT_META A  &hmlal LEFT_ALT S  &hmlal LCTRL D  &hmal LSHFT F  &agrtap G              &agrtap H  &hmar RSHFT J  &hmlar RCTRL K  &hmlar RALT L  &hmlar RIGHT_META SEMICOLON  &agrtap SINGLE_QUOTE
+&none          &agrtap Z           &agrtap X          &agrtap C       &agrtap V      &agrtap B              &agrtap N  &agrtap M      &agrtap COMMA   &agrtap DOT    &none                        &agrtap RIGHT_BRACKET
+&to 3          &none               &to 1              &to 0           &mo 8          &my_spc  &mo 5  &mo 6  &my_spc                                                &lang_change_1               &none
             >;
         };
 
         ua_default_layer {
             bindings = <
-&none       &agrtap Q           &agrtap W           &agrtap E       &agrtap R      &agrtap T                &agrtap Y  &agrtap U      &agrtap I       &agrtap O      &agrtap P                    &agrtap LEFT_BRACKET
-&agrtap N9  &hmlal LEFT_META A  &hmlal LEFT_ALT N2  &hmlal LCTRL D  &hmal LSHFT F  &agrtap G                &agrtap H  &hmar RSHFT J  &hmlar RCTRL K  &hmlar RALT L  &hmlar RIGHT_META SEMICOLON  &agrtap N3
-&none       &agrtap Z           &agrtap X           &agrtap C       &agrtap V      &agrtap B                &agrtap N  &agrtap M      &agrtap COMMA   &agrtap DOT    &none                        &agrtap N4
-&none       &to 2               &to 1               &to 0           &mo 8          &kp SPACE  &mo 5  &mo 6  &kp SPACE                                                &lang_change_1               &none
+&none       &agrtap Q           &agrtap W           &agrtap E       &agrtap R      &agrtap T              &agrtap Y  &agrtap U      &agrtap I       &agrtap O      &agrtap P                    &agrtap LEFT_BRACKET
+&agrtap N9  &hmlal LEFT_META A  &hmlal LEFT_ALT N2  &hmlal LCTRL D  &hmal LSHFT F  &agrtap G              &agrtap H  &hmar RSHFT J  &hmlar RCTRL K  &hmlar RALT L  &hmlar RIGHT_META SEMICOLON  &agrtap N3
+&none       &agrtap Z           &agrtap X           &agrtap C       &agrtap V      &agrtap B              &agrtap N  &agrtap M      &agrtap COMMA   &agrtap DOT    &none                        &agrtap N4
+&none       &to 2               &to 1               &to 0           &mo 8          &my_spc  &mo 5  &mo 6  &my_spc                                                &lang_change_1               &none
             >;
         };
 
