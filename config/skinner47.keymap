@@ -473,8 +473,8 @@
         };
 
         my_spc: my_spc {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             wait-ms = <0>;
             bindings =
                 <&macro_press>,
