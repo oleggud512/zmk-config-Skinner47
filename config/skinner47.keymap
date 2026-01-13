@@ -502,13 +502,6 @@
             timeout-ms = <50>;
             layers = <0 1 2 3>;
         };
-
-        combo_shift_right_up {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <7 6>;
-            timeout-ms = <50>;
-            layers = <0 1 2 3>;
-        };
     };
 
     behaviors {
