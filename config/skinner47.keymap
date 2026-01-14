@@ -671,7 +671,7 @@
 &trans      &kp BACKSPACE  &prt_scr_all  &prt_scr_snip  &trans          &untab                     &kp CAPSLOCK  &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
 &kp ESCAPE  &kp LMETA      &kp LEFT_ALT  &kp LCTRL      &kp LEFT_SHIFT  &kp TAB                    &trans        &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
 &trans      &undo          &save         &copy          &paste          &kp ENTER                  &kp ENTER     &kp BACKSPACE  &kp DELETE     &kp MINUS    &kp EQUAL  &kp BACKSLASH
-&trans      &bootloader    &trans        &trans         &trans          &trans     &trans  &trans  &trans                                                   &trans     &trans
+&trans      &bootloader    &trans        &to 12         &trans          &trans     &trans  &trans  &trans                                                   &trans     &trans
             >;
         };
 
@@ -717,6 +717,24 @@
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
+            >;
+        };
+
+        hub_layer {
+            bindings = <
+&to 0  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none                       &none  &none
+            >;
+        };
+
+        anki_layer {
+            bindings = <
+&to 0  &none   &none   &none   &none   &none                    &none  &none  &none  &none  &none  &none
+&none  &kp N1  &kp N2  &kp N3  &kp N4  &none                    &none  &none  &none  &none  &none  &none
+&none  &none   &none   &none   &none   &none                    &none  &none  &none  &none  &none  &none
+&none  &none   &none   &none   &none   &kp SPACE  &none  &none  &none                       &none  &none
             >;
         };
     };
