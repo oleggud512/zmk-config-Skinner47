@@ -659,8 +659,8 @@
 
         anki_default_layer {
             bindings = <
-&to 0  &none   &none   &none   &none   &none                   &none   &none  &none  &none  &none  &none
-&none  &kp N1  &kp N2  &kp N3  &kp N4  &none                   &none   &none  &none  &none  &none  &none
+&to 0  &none   &none   &kp R   &kp N6  &kp N5                  &none   &none  &none  &none  &none  &none
+&none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N7                  &none   &none  &none  &none  &none  &none
 &none  &none   &none   &none   &none   &none                   &none   &none  &none  &none  &none  &none
 &none  &none   &none   &none   &trans  &trans  &trans  &trans  &trans                       &none  &none
             >;

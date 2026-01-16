@@ -74,14 +74,14 @@ nice_view_spi: &spi2 {
 	status = "okay";
 
 	scroller {
-		layers = <9>;
+		layers = <10>;
 		input-processors = <&zip_xy_scaler 1 32>
                      , <&zip_xy_transform 2>
                      , <&zip_xy_to_scroll_mapper>;
 	};
 
 	snipe {
-		layers = <10>;
+		layers = <11>;
 		input-processors = <&zip_xy_scaler 1 3>;
 	};
 };
