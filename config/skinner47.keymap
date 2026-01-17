@@ -463,11 +463,13 @@
             wait-ms = <10>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &kp LALT>,
+                // <&kp LCTRL &kp LALT>,
+                <&kp RIGHT_ALT>,
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
-                <&kp LALT &kp LCTRL>;
+                // <&kp LALT &kp LCTRL>;
+                <&kp RIGHT_ALT>;
 
             label = "a tap";
         };
