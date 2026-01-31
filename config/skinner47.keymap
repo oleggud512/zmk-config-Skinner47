@@ -688,7 +688,7 @@
         right_layer {
             bindings = <
 &trans          &kp SINGLE_QUOTE  &sft_comma     &sft_dot    &sft_quote  &kp DOT                    &sft_3      &kp SEMICOLON   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &sft_6       &trans
-&sft_grave      &sft_1            &kp MINUS      &sft_equal  &kp EQUAL   &sft_7                     &sft_slash  &sft_semicolon  &sft_9            &sft_0             &trans       &trans
+&sft_grave      &sft_1            &kp MINUS      &sft_equal  &kp EQUAL   &sft_7                     &sft_slash  &sft_semicolon  &sft_9            &sft_0             &sft_5       &trans
 &sft_backslash  &sft_minus        &kp BACKSLASH  &sft_8      &kp SLASH   &kp COMMA                  &sft_2      &sft_4          &sft_l_sq_br      &sft_r_sq_br       &trans       &trans
 &trans          &trans            &trans         &trans      &trans      &trans     &trans  &trans  &trans                                                           &bootloader  &trans
             >;
