@@ -13,11 +13,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_CONTROL>,
+                <&os_ctrl_cmd>,
                 <&macro_tap>,
                 <&kp C>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL>;
+                <&os_ctrl_cmd>;
 
             label = "COPY";
         };
@@ -27,11 +27,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_CONTROL>,
+                <&os_ctrl_cmd>,
                 <&macro_tap>,
                 <&kp V>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL>;
+                <&os_ctrl_cmd>;
 
             label = "PASTE";
         };
@@ -41,11 +41,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_CONTROL>,
+                <&os_ctrl_cmd>,
                 <&macro_tap>,
                 <&kp S>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL>;
+                <&os_ctrl_cmd>;
 
             label = "SAVE";
         };
@@ -55,11 +55,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_CONTROL>,
+                <&os_ctrl_cmd>,
                 <&macro_tap>,
                 <&kp Z>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL>;
+                <&os_ctrl_cmd>;
 
             label = "UNDO";
         };
@@ -90,6 +90,62 @@
                 <&kp LEFT_SHIFT &kp LEFT_META>;
 
             label = "PRT_SCR_SNIP";
+        };
+
+        mac_prt_all: mac_prt_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp N3>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_GUI>;
+
+            label = "MAC_PRT_ALL";
+        };
+
+        mac_prt_snip: mac_prt_snip {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp N4>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_GUI>;
+
+            label = "MAC_PRT_SNIP";
+        };
+
+        mac_line_start: mac_line_start {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
+
+            label = "MAC_LINE_START";
+        };
+
+        mac_line_end: mac_line_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
+
+            label = "MAC_LINE_END";
         };
 
         untab: untab {
@@ -630,6 +686,78 @@
             win-bindings = <&kp LEFT_CONTROL>;
             lin-bindings = <&kp LEFT_CONTROL>;
         };
+
+        os_ctrl_cmd: os_ctrl_cmd {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&kp LEFT_GUI>;
+            win-bindings = <&kp LEFT_CONTROL>;
+            lin-bindings = <&kp LEFT_CONTROL>;
+        };
+
+        os_prt_scr_all: os_prt_scr_all {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&mac_prt_all>;
+            win-bindings = <&prt_scr_all>;
+            lin-bindings = <&prt_scr_all>;
+        };
+
+        os_prt_scr_snip: os_prt_scr_snip {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&mac_prt_snip>;
+            win-bindings = <&prt_scr_snip>;
+            lin-bindings = <&prt_scr_snip>;
+        };
+
+        os_home: os_home {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&mac_line_start>;
+            win-bindings = <&kp HOME>;
+            lin-bindings = <&kp HOME>;
+        };
+
+        os_end: os_end {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&mac_line_end>;
+            win-bindings = <&kp END>;
+            lin-bindings = <&kp END>;
+        };
+
+        os_hr_a: os_hr_a {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&hmll LEFT_CONTROL A>;
+            win-bindings = <&hmll LEFT_META A>;
+            lin-bindings = <&hmll LEFT_META A>;
+        };
+
+        os_hr_d: os_hr_d {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&hmll LEFT_META D>;
+            win-bindings = <&hmll LEFT_CONTROL D>;
+            lin-bindings = <&hmll LEFT_CONTROL D>;
+        };
+
+        os_hr_k: os_hr_k {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&hmlr RIGHT_META K>;
+            win-bindings = <&hmlr RCTRL K>;
+            lin-bindings = <&hmlr RCTRL K>;
+        };
+
+        os_hr_semi: os_hr_semi {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&hmlr RCTRL SEMICOLON>;
+            win-bindings = <&hmlr RIGHT_META SEMICOLON>;
+            lin-bindings = <&hmlr RIGHT_META SEMICOLON>;
+        };
     };
 
     keymap {
@@ -637,10 +765,10 @@
 
         default_layer {
             bindings = <
-&none      &kp Q              &kp W             &kp E                 &kp R              &kp T                  &kp Y    &kp U         &kp I          &kp O              &kp P                       &none
-&kp GRAVE  &hmll LEFT_META A  &hmll LEFT_ALT S  &hmll LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                  &kp H    &hmr RSHFT J  &hmlr RCTRL K  &hmlr RIGHT_ALT L  &hmlr RIGHT_META SEMICOLON  &none
-&none      &kp Z              &kp X             &kp C                 &kp V              &kp B                  &kp N    &kp M         &none          &none              &none                       &none
-&to 3      &to 2              &to 1             &none                 &mo 9              &my_spc  &mo 6  &mo 7  &my_spc                                                  &lang_change_1              &none
+&none      &kp Q      &kp W             &kp E     &kp R              &kp T                  &kp Y    &kp U         &kp I          &kp O              &kp P        &none
+&kp GRAVE  &os_hr_a   &hmll LEFT_ALT S  &os_hr_d  &hml LEFT_SHIFT F  &kp G                  &kp H    &hmr RSHFT J  &os_hr_k       &hmlr RIGHT_ALT L  &os_hr_semi  &none
+&none      &kp Z      &kp X             &kp C     &kp V              &kp B                  &kp N    &kp M         &none          &none              &none        &none
+&to 3      &to 2      &to 1             &none     &mo 9              &my_spc  &mo 6  &mo 7  &my_spc                                                  &lang_change_1 &none
             >;
         };
 
@@ -691,10 +819,10 @@
 
         left_layer {
             bindings = <
-&trans      &kp BACKSPACE  &prt_scr_all  &prt_scr_snip  &trans          &untab                     &kp CAPSLOCK  &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
-&kp ESCAPE  &kp LMETA      &kp LEFT_ALT  &kp LCTRL      &kp LEFT_SHIFT  &kp TAB                    &trans        &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
-&trans      &undo          &save         &copy          &paste          &kp ENTER                  &kp ENTER     &kp BACKSPACE  &kp DELETE     &kp MINUS    &kp EQUAL  &kp BACKSLASH
-&trans      &bootloader    &to 12        &to 4          &trans          &trans     &trans  &trans  &trans                                                   &trans     &trans
+&trans      &kp BACKSPACE  &os_prt_scr_all  &os_prt_scr_snip  &trans          &untab                     &kp CAPSLOCK  &os_home       &kp PAGE_DOWN  &kp PAGE_UP  &os_end    &trans
+&kp ESCAPE  &kp LMETA      &kp LEFT_ALT     &kp LCTRL         &kp LEFT_SHIFT  &kp TAB                    &trans        &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
+&trans      &undo          &save            &copy             &paste          &kp ENTER                  &kp ENTER     &kp BACKSPACE  &kp DELETE     &kp MINUS    &kp EQUAL  &kp BACKSLASH
+&trans      &bootloader    &to 12           &to 4             &trans          &trans     &trans  &trans  &trans                                                   &trans     &trans
             >;
         };
 

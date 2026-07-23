@@ -81,7 +81,7 @@ static const struct behavior_driver_api os_switch_driver_api = {
         .lin_bindings = OS_SWITCH_EXTRACT_BINDING(lin_bindings, n),                  \
     };                                                                               \
     DEVICE_DT_INST_DEFINE(n, NULL, NULL, &data_##n, &config_##n,                     \
-                          APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT,          \
+                          POST_KERNEL, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT,          \
                           &os_switch_driver_api);
 
 DT_INST_FOREACH_STATUS_OKAY(OS_SWITCH_INST)

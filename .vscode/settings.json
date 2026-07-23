@@ -1,0 +1,8 @@
+{
+    "device-tree.includeDirs": [
+        "${workspaceFolder}/zmk/app/include",
+        "${workspaceFolder}/zmk/app/dts",
+        "${workspaceFolder}/zephyr/include",
+        "${workspaceFolder}/zephyr/dts"
+    ]
+}
