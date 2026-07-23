@@ -1,14 +1,18 @@
+description: "Custom ZMK behavior to select binding based on active operating system state"
 compatible: "zmk,behavior-os-switch"
 properties:
   "#binding-cells":
     type: int
     const: 0
-  mac-binding:
+  mac-bindings:
     type: phandle-array
     required: true
-  win-binding:
+    specifier-space: binding
+  win-bindings:
     type: phandle-array
     required: true
-  lin-binding:
+    specifier-space: binding
+  lin-bindings:
     type: phandle-array
     required: true
+    specifier-space: binding

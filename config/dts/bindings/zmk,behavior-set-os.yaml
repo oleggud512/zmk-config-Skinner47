@@ -1,0 +1,6 @@
+description: "Custom ZMK behavior to set the active operating system state"
+compatible: "zmk,behavior-set-os"
+properties:
+  "#binding-cells":
+    type: int
+    const: 1

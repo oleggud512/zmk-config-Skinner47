@@ -617,6 +617,19 @@
             hold-trigger-key-positions = <MY_RIGHT>;
             bindings = <&kp>, <&kp>;
         };
+
+        set_os: set_os {
+            compatible = "zmk,behavior-set-os";
+            #binding-cells = <1>;
+        };
+
+        os_cmd_ctrl: os_cmd_ctrl {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&kp LEFT_GUI>;
+            win-bindings = <&kp LEFT_CONTROL>;
+            lin-bindings = <&kp LEFT_CONTROL>;
+        };
     };
 
     keymap {

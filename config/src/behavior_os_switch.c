@@ -7,9 +7,9 @@
 
 struct os_switch_config
 {
-    struct zmk_behavior_binding mac_binding;
-    struct zmk_behavior_binding win_binding;
-    struct zmk_behavior_binding lin_binding;
+    struct zmk_behavior_binding mac_bindings;
+    struct zmk_behavior_binding win_bindings;
+    struct zmk_behavior_binding lin_bindings;
 };
 
 struct os_switch_data
@@ -22,11 +22,11 @@ static int invoke_target(const struct os_switch_config *cfg, uint8_t lang,
 {
     struct zmk_behavior_binding target;
     if (lang == 0)
-        target = cfg->mac_binding;
+        target = cfg->mac_bindings;
     else if (lang == 1)
-        target = cfg->win_binding;
+        target = cfg->win_bindings;
     else
-        target = cfg->lin_binding;
+        target = cfg->lin_bindings;
 
     if (pressed)
     {
@@ -45,7 +45,7 @@ static int on_os_switch_pressed(struct zmk_behavior_binding *binding,
     const struct os_switch_config *cfg = dev->config;
     struct os_switch_data *data = dev->data;
 
-    data->pressed_lang = get_os_lang();
+    data->pressed_lang = get_os();
     return invoke_target(cfg, data->pressed_lang, event, true);
 }
 
@@ -64,15 +64,24 @@ static const struct behavior_driver_api os_switch_driver_api = {
     .binding_released = on_os_switch_released,
 };
 
-#define OS_SWITCH_INST(n)                                                           \
-    static struct os_switch_data data_##n = {};                                     \
-    static const struct os_switch_config config_##n = {                             \
-        .mac_binding = ZMK_KEYMAP_EXTRACT_BINDING(0, DT_INST_PROP(n, mac_binding)), \
-        .win_binding = ZMK_KEYMAP_EXTRACT_BINDING(0, DT_INST_PROP(n, win_binding)), \
-        .lin_binding = ZMK_KEYMAP_EXTRACT_BINDING(0, DT_INST_PROP(n, lin_binding)), \
-    };                                                                              \
-    DEVICE_DT_INST_DEFINE(n, NULL, NULL, &data_##n, &config_##n,                    \
-                          APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT,         \
+#define OS_SWITCH_EXTRACT_BINDING(prop, n)                                                         \
+    {                                                                                              \
+        .behavior_dev = DEVICE_DT_NAME(DT_PHANDLE_BY_IDX(DT_DRV_INST(n), prop, 0)),                \
+        .param1 = COND_CODE_0(DT_PHA_HAS_CELL_AT_IDX(DT_DRV_INST(n), prop, 0, param1), (0),        \
+                              (DT_PHA_BY_IDX(DT_DRV_INST(n), prop, 0, param1))),                   \
+        .param2 = COND_CODE_0(DT_PHA_HAS_CELL_AT_IDX(DT_DRV_INST(n), prop, 0, param2), (0),        \
+                              (DT_PHA_BY_IDX(DT_DRV_INST(n), prop, 0, param2))),                   \
+    }
+
+#define OS_SWITCH_INST(n)                                                            \
+    static struct os_switch_data data_##n = {};                                      \
+    static const struct os_switch_config config_##n = {                              \
+        .mac_bindings = OS_SWITCH_EXTRACT_BINDING(mac_bindings, n),                  \
+        .win_bindings = OS_SWITCH_EXTRACT_BINDING(win_bindings, n),                  \
+        .lin_bindings = OS_SWITCH_EXTRACT_BINDING(lin_bindings, n),                  \
+    };                                                                               \
+    DEVICE_DT_INST_DEFINE(n, NULL, NULL, &data_##n, &config_##n,                     \
+                          APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT,          \
                           &os_switch_driver_api);
 
 DT_INST_FOREACH_STATUS_OKAY(OS_SWITCH_INST)
