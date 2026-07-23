@@ -1,7 +1,10 @@
 zephyr_library()
-zephyr_library_include_directories(${ZEPHYR_BASE}/drivers)
+zephyr_library_include_directories(
+    ${ZEPHYR_BASE}/drivers
+    ${CMAKE_CURRENT_LIST_DIR}/../../../src
+)
 zephyr_library_sources(
-    src/os_state.c
-    src/behavior_set_os.c
-    src/behavior_os_switch.c
+    ../../../src/os_state.c
+    ../../../src/behavior_set_os.c
+    ../../../src/behavior_os_switch.c
 )

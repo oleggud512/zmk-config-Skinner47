@@ -1,2 +1,13 @@
-
+# Build directories and outputs
 .zmk/
+.west/
+build/
+builds/
+*.uf2
+
+# West dependencies / submodules
+modules/
+zephyr/
+zmk/
+zmk-lpm009m360a-driver/
+zmk-pmw3610-driver/
