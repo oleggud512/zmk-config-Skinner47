@@ -1,0 +1,14 @@
+compatible: "zmk,behavior-os-switch"
+properties:
+  "#binding-cells":
+    type: int
+    const: 0
+  mac-binding:
+    type: phandle-array
+    required: true
+  win-binding:
+    type: phandle-array
+    required: true
+  lin-binding:
+    type: phandle-array
+    required: true

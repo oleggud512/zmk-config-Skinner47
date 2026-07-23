@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "ZMK",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../zmk/app/include/**",
+                "${workspaceFolder}/../zmk/zephyr/include/**",
+                "${workspaceFolder}/../zmk/zephyr/lib/libc/minimal/include/**"
+            ],
+            "defines": [
+                "CONFIG_ZMK_KEYBOARD_NAME=\"YourKeyboard\""
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,5 @@
+compatible: "zmk,behavior-set-lang"
+properties:
+  "#binding-cells":
+    type: int
+    const: 1
