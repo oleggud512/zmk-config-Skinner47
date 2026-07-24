@@ -777,6 +777,22 @@
             lin-bindings = <&kp END>;
         };
 
+        os_word_left: os_word_left {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&kp LA(LEFT)>;
+            win-bindings = <&kp LC(LEFT)>;
+            lin-bindings = <&kp LC(LEFT)>;
+        };
+
+        os_word_right: os_word_right {
+            compatible = "zmk,behavior-os-switch";
+            #binding-cells = <0>;
+            mac-bindings = <&kp LA(RIGHT)>;
+            win-bindings = <&kp LC(RIGHT)>;
+            lin-bindings = <&kp LC(RIGHT)>;
+        };
+
         os_hr_a: os_hr_a {
             compatible = "zmk,behavior-os-switch";
             #binding-cells = <0>;
@@ -870,7 +886,7 @@
         left_layer {
             bindings = <
 &trans      &kp BACKSPACE  &os_prt_scr_all  &os_prt_scr_snip  &trans          &untab                     &kp CAPSLOCK  &os_home       &kp PAGE_DOWN  &kp PAGE_UP  &os_end    &trans
-&kp ESCAPE  &kp LMETA      &kp LEFT_ALT     &kp LCTRL         &kp LEFT_SHIFT  &kp TAB                    &trans        &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
+&kp ESCAPE  &kp LMETA      &kp LEFT_ALT     &kp LCTRL         &kp LEFT_SHIFT  &kp TAB                    &os_word_left &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &os_word_right
 &trans      &undo          &save            &copy             &paste          &kp ENTER                  &kp ENTER     &kp BACKSPACE  &kp DELETE     &kp MINUS    &kp EQUAL  &kp BACKSLASH
 &trans      &bootloader    &to 12           &to 4             &trans          &trans     &trans  &trans  &trans                                                   &trans     &trans
             >;
