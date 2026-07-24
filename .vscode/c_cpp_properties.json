@@ -4,6 +4,7 @@
             "name": "ZMK",
             "includePath": [
                 "${workspaceFolder}/**",
+                "${workspaceFolder}/build/zephyr/include/generated/**",
                 "${workspaceFolder}/zmk/app/include/**",
                 "${workspaceFolder}/zmk/app/dts/**",
                 "${workspaceFolder}/zephyr/include/**",
