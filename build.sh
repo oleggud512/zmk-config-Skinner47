@@ -53,10 +53,21 @@ west build -s zmk/app -b skinner47_right -p always -- \
 cp build/zephyr/zmk.uf2 "${OUTPUT_DIR}/skinner47_right.uf2"
 echo "✔ Saved: ${OUTPUT_DIR}/skinner47_right.uf2"
 
+# 3. Build Settings Reset
+echo ""
+echo "--> Building Settings Reset (settings_reset)..."
+west build -s zmk/app -b skinner47_left -p always -- \
+  -DSHIELD=settings_reset \
+  -DZMK_CONFIG="$(pwd)/config"
+
+cp build/zephyr/zmk.uf2 "${OUTPUT_DIR}/settings_reset.uf2"
+echo "✔ Saved: ${OUTPUT_DIR}/settings_reset.uf2"
+
 echo ""
 echo "========================================="
 echo " Build Completed Successfully!"
 echo " Firmware files saved to:"
 echo "   - ${OUTPUT_DIR}/skinner47_left.uf2"
 echo "   - ${OUTPUT_DIR}/skinner47_right.uf2"
+echo "   - ${OUTPUT_DIR}/settings_reset.uf2"
 echo "========================================="
