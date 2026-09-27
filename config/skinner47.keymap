@@ -942,7 +942,7 @@
 &to 0          &none          &none          &none          &bt BT_CLR     &bt BT_CLR_ALL                &none  &none  &none  &none  &none  &none
 &bt_sel_win_4  &bt_sel_win_3  &bt_sel_lin    &bt_sel_win    &bt_sel_mac    &none                         &none  &none  &none  &none  &none  &none
 &bt BT_DISC 4  &bt BT_DISC 3  &bt BT_DISC 2  &bt BT_DISC 1  &bt BT_DISC 0  &none                         &none  &none  &none  &none  &none  &none
-&none          &none          &none          &none          &none          &none           &none  &none  &none                       &none  &none
+&sys_reset     &none          &none          &none          &none          &none           &none  &none  &none                       &none  &none
             >;
         };
     };
