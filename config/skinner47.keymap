@@ -831,18 +831,18 @@
 
         default_layer {
             bindings = <
-&none      &kp Q      &kp W             &kp E     &kp R              &kp T                  &kp Y    &kp U         &kp I          &kp O              &kp P        &none
-&kp GRAVE  &os_hr_a   &hmll LEFT_ALT S  &os_hr_d  &hml LEFT_SHIFT F  &kp G                  &kp H    &hmr RSHFT J  &os_hr_k       &hmlr RIGHT_ALT L  &os_hr_semi  &none
-&none      &kp Z      &kp X             &kp C     &kp V              &kp B                  &kp N    &kp M         &none          &none              &none        &none
+&none      &kp Q      &kp W             &kp E     &kp R              &kp T                  &kp Y    &kp U         &kp I          &kp O              &kp P          &none
+&kp GRAVE  &os_hr_a   &hmll LEFT_ALT S  &os_hr_d  &hml LEFT_SHIFT F  &kp G                  &kp H    &hmr RSHFT J  &os_hr_k       &hmlr RIGHT_ALT L  &os_hr_semi    &none
+&none      &kp Z      &kp X             &kp C     &kp V              &kp B                  &kp N    &kp M         &none          &none              &none          &none
 &to 3      &to 2      &to 1             &none     &mo 9              &my_spc  &mo 6  &mo 7  &my_spc                                                  &lang_change_1 &none
             >;
         };
 
         de_default_layer {
             bindings = <
-&none  &kp Q              &kp W             &kp E                 &kp R              &kp T                  &kp Z    &kp U         &kp I          &kp O              &kp P                 &agrtap N8
-&none  &hmll LEFT_META A  &hmll LEFT_ALT S  &hmll LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                  &kp H    &hmr RSHFT J  &hmlr RCTRL K  &hmlr RIGHT_ALT L  &hmlar RIGHT_META N7  &agrtap N6
-&none  &kp Y              &kp X             &kp C                 &kp V              &kp B                  &kp N    &kp M         &none          &none              &none                 &agrtap N5
+&none  &kp Q              &none             &kp O                 &kp U              &kp Y                  &kp V    &kp D         &kp C          &kp L              &kp F                 &agrtap N5
+&none  &hmll LEFT_META H  &hmll LEFT_ALT A  &hmll LEFT_CONTROL E  &hml LEFT_SHIFT I  &none                  &kp G    &hmr RSHFT T  &hmlr RCTRL R  &hmlr RIGHT_ALT N  &hmlr RIGHT_META S    &kp J
+&none  &kp K              &agrtap N6        &agrtap N7            &agrtap N8         &kp X                  &kp B    &kp P         &kp M          &kp W              &kp Z                 &none
 &to 3  &to 2              &none             &to 0                 &mo 9              &my_spc  &mo 6  &mo 7  &my_spc                                                  &lang_change_1        &none
             >;
         };
