@@ -1,0 +1,53 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_SKINNER47_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "SKINNER47"
+
+config ZMK_BLE
+    default y
+
+config ZMK_USB
+    default y
+
+config BT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+config BT_MAX_CONN
+    default 7
+
+config BT_MAX_PAIRED
+    default 7
+
+config ZMK_MOUSE
+    default y
+
+config INPUT
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+    default y
+
+config ZMK_STUDIO
+    default y
+
+config ZMK_STUDIO_LOCKING
+    default n
+
+endif
+
+

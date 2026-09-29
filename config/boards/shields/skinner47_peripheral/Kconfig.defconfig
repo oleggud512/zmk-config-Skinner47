@@ -1,0 +1,6 @@
+if SHIELD_SKINNER47_PERIPHERAL
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+endif

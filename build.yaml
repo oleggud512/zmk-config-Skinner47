@@ -1,5 +1,6 @@
 ---
 include:
+  # Standalone Split (Left Central with ZMK Studio, Right Peripheral)
   - board: skinner47_left
     shield: nice_view
     snippet: studio-rpc-usb-uart
@@ -8,3 +9,11 @@ include:
   - board: skinner47_left
     shield: settings_reset
 
+  # Dongle Setup (Dongle Central with ZMK Studio, Left & Right Peripherals)
+  - board: nrf52840dongle_nrf52840
+    shield: skinner47_dongle
+    snippet: studio-rpc-usb-uart
+  - board: skinner47_left
+    shield: nice_view skinner47_peripheral
+  - board: nrf52840dongle_nrf52840
+    shield: settings_reset
