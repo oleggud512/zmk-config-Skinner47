@@ -3,6 +3,10 @@
         "${workspaceFolder}/zmk/app/include",
         "${workspaceFolder}/zmk/app/dts",
         "${workspaceFolder}/zephyr/include",
-        "${workspaceFolder}/zephyr/dts"
+        "${workspaceFolder}/zephyr/dts",
+        "${workspaceFolder}/../zmk/app/include",
+        "${workspaceFolder}/../zmk/app/dts",
+        "${workspaceFolder}/../zephyr/include",
+        "${workspaceFolder}/../zephyr/dts"
     ]
 }

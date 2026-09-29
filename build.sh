@@ -12,6 +12,17 @@ elif [ -d "${SCRIPT_DIR}/.venv/bin" ]; then
     export PATH="${SCRIPT_DIR}/.venv/bin:${PATH}"
 fi
 
+# Locate workspace and ZMK app directory
+WORKSPACE_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+if [ -d "${WORKSPACE_DIR}/zmk/app" ]; then
+    ZMK_APP_DIR="${WORKSPACE_DIR}/zmk/app"
+elif [ -d "${SCRIPT_DIR}/zmk/app" ]; then
+    ZMK_APP_DIR="${SCRIPT_DIR}/zmk/app"
+else
+    echo "Error: Cannot find zmk/app directory" >&2
+    exit 1
+fi
+
 # Ensure protoc wrapper exists in venv if not present
 VENV_BIN="$(which west 2>/dev/null | xargs dirname 2>/dev/null || true)"
 if [ -n "${VENV_BIN}" ] && [ ! -f "${VENV_BIN}/protoc" ]; then
@@ -24,7 +35,7 @@ fi
 
 # ISO timestamp for output folder (including milliseconds)
 ISO_TIME="$(date +"%Y-%m-%dT%H-%M-%S.%3N")"
-OUTPUT_DIR="builds/${ISO_TIME}"
+OUTPUT_DIR="${SCRIPT_DIR}/builds/${ISO_TIME}"
 mkdir -p "${OUTPUT_DIR}"
 
 echo "========================================="
@@ -35,32 +46,32 @@ echo "========================================="
 # 1. Build Left Half
 echo ""
 echo "--> Building Left Half (skinner47_left)..."
-west build -s zmk/app -b skinner47_left -p always -- \
+west build -s "${ZMK_APP_DIR}" -d "${SCRIPT_DIR}/build" -b skinner47_left -p always -- \
   -DSHIELD=nice_view \
   -DSNIPPET=studio-rpc-usb-uart \
-  -DZMK_CONFIG="$(pwd)/config"
+  -DZMK_CONFIG="${SCRIPT_DIR}/config"
 
-cp build/zephyr/zmk.uf2 "${OUTPUT_DIR}/skinner47_left.uf2"
+cp "${SCRIPT_DIR}/build/zephyr/zmk.uf2" "${OUTPUT_DIR}/skinner47_left.uf2"
 echo "✔ Saved: ${OUTPUT_DIR}/skinner47_left.uf2"
 
 # 2. Build Right Half
 echo ""
 echo "--> Building Right Half (skinner47_right)..."
-west build -s zmk/app -b skinner47_right -p always -- \
+west build -s "${ZMK_APP_DIR}" -d "${SCRIPT_DIR}/build" -b skinner47_right -p always -- \
   -DSHIELD=nice_view \
-  -DZMK_CONFIG="$(pwd)/config"
+  -DZMK_CONFIG="${SCRIPT_DIR}/config"
 
-cp build/zephyr/zmk.uf2 "${OUTPUT_DIR}/skinner47_right.uf2"
+cp "${SCRIPT_DIR}/build/zephyr/zmk.uf2" "${OUTPUT_DIR}/skinner47_right.uf2"
 echo "✔ Saved: ${OUTPUT_DIR}/skinner47_right.uf2"
 
 # 3. Build Settings Reset
 echo ""
 echo "--> Building Settings Reset (settings_reset)..."
-west build -s zmk/app -b skinner47_left -p always -- \
+west build -s "${ZMK_APP_DIR}" -d "${SCRIPT_DIR}/build" -b skinner47_left -p always -- \
   -DSHIELD=settings_reset \
-  -DZMK_CONFIG="$(pwd)/config"
+  -DZMK_CONFIG="${SCRIPT_DIR}/config"
 
-cp build/zephyr/zmk.uf2 "${OUTPUT_DIR}/settings_reset.uf2"
+cp "${SCRIPT_DIR}/build/zephyr/zmk.uf2" "${OUTPUT_DIR}/settings_reset.uf2"
 echo "✔ Saved: ${OUTPUT_DIR}/settings_reset.uf2"
 
 echo ""

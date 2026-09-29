@@ -8,7 +8,11 @@
                 "${workspaceFolder}/zmk/app/include/**",
                 "${workspaceFolder}/zmk/app/dts/**",
                 "${workspaceFolder}/zephyr/include/**",
-                "${workspaceFolder}/zephyr/lib/libc/minimal/include/**"
+                "${workspaceFolder}/zephyr/lib/libc/minimal/include/**",
+                "${workspaceFolder}/../zmk/app/include/**",
+                "${workspaceFolder}/../zmk/app/dts/**",
+                "${workspaceFolder}/../zephyr/include/**",
+                "${workspaceFolder}/../zephyr/lib/libc/minimal/include/**"
             ],
             "defines": [
                 "CONFIG_ZMK_KEYBOARD_NAME=\"Skinner47\""
